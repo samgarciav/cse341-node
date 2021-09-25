@@ -1,4 +1,5 @@
 const path = require('path');
+const PORT = process.env.PORT || 5000;
 const rootDir = require('./util/path');
 const express = require('express');
 const app = express();
@@ -26,4 +27,6 @@ app.use("/users", (req, res, next) => {
   res.send(`<h1>You are in the /users </h1>`);
 });
 
-app.listen(3000);
+//app.listen(3000);
+
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
