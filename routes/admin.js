@@ -4,7 +4,7 @@ const express = require('express');
 const rootDir = require('../util/path');
 const router = express.Router();
 
-const products = [];
+const products=[];
 
 router.get("/add-product", (req, res, next) => {
   res.render('add-product', {
@@ -15,7 +15,7 @@ router.get("/add-product", (req, res, next) => {
 
 router.post("/add-product", (req, res, next) => {
   //console.log(req.body);
-  products.push({ product: req.body.newProduct });
+  products.push(req.body);
   //console.log(products);
   res.redirect('/');
 });
