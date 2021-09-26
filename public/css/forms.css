@@ -4,15 +4,17 @@
 
 .form-control label,
 .form-control input {
-    display: block;
+    display: flex;
     width: 100%;
     margin-bottom: 0.25rem;
+    align-items: center;
 }
 
 .form-control input {
     border: 1px solid #a1a1a1;
     font: inherit;
     border-radius: 2px;
+    flex-basis: 15%;
 }
 
 .form-control input:focus {
